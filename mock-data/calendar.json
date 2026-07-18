@@ -1,0 +1,29 @@
+[
+  {
+    "id": "cal-1",
+    "createdAt": "2026-07-01",
+    "updatedAt": "2026-07-11",
+    "title": "Factory Act Return Filing",
+    "date": "2026-07-22",
+    "type": "Compliance",
+    "owner": "Anika Rao"
+  },
+  {
+    "id": "cal-2",
+    "createdAt": "2026-07-01",
+    "updatedAt": "2026-07-12",
+    "title": "Vendor onboarding review",
+    "date": "2026-07-18",
+    "type": "Task",
+    "owner": "Marcus Chen"
+  },
+  {
+    "id": "cal-3",
+    "createdAt": "2026-07-01",
+    "updatedAt": "2026-07-13",
+    "title": "Quarterly internal audit",
+    "date": "2026-07-26",
+    "type": "Audit",
+    "owner": "Ritika Shah"
+  }
+]

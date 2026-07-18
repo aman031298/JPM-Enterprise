@@ -1,0 +1,24 @@
+[
+  {
+    "id": "rsk-1",
+    "createdAt": "2026-02-21",
+    "updatedAt": "2026-07-10",
+    "title": "Delayed statutory filing",
+    "category": "Regulatory",
+    "impact": 4,
+    "likelihood": 3,
+    "mitigation": "Introduce weekly due-date review",
+    "owner": "Anika Rao"
+  },
+  {
+    "id": "rsk-2",
+    "createdAt": "2026-03-18",
+    "updatedAt": "2026-07-08",
+    "title": "Vendor license lapse",
+    "category": "Third Party",
+    "impact": 3,
+    "likelihood": 4,
+    "mitigation": "Configure 45-day alert workflow",
+    "owner": "Marcus Chen"
+  }
+]

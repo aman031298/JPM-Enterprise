@@ -1,0 +1,22 @@
+[
+  {
+    "id": "doc-1",
+    "createdAt": "2026-02-08",
+    "updatedAt": "2026-07-10",
+    "title": "Fire Safety Certificate",
+    "category": "License",
+    "owner": "Operations",
+    "expiryDate": "2026-08-10",
+    "status": "Expiring"
+  },
+  {
+    "id": "doc-2",
+    "createdAt": "2026-01-28",
+    "updatedAt": "2026-07-09",
+    "title": "ESI Filing Receipt",
+    "category": "Statutory",
+    "owner": "People Success",
+    "expiryDate": "2027-01-15",
+    "status": "Valid"
+  }
+]

@@ -1,0 +1,29 @@
+[
+  {
+    "id": "br-1",
+    "createdAt": "2026-01-05",
+    "updatedAt": "2026-07-05",
+    "companyId": "cmp-1",
+    "name": "Mumbai HQ",
+    "city": "Mumbai",
+    "status": "Operational"
+  },
+  {
+    "id": "br-2",
+    "createdAt": "2026-01-15",
+    "updatedAt": "2026-07-09",
+    "companyId": "cmp-1",
+    "name": "Pune Plant",
+    "city": "Pune",
+    "status": "Audit Review"
+  },
+  {
+    "id": "br-3",
+    "createdAt": "2026-02-05",
+    "updatedAt": "2026-07-04",
+    "companyId": "cmp-2",
+    "name": "Bengaluru Delivery Center",
+    "city": "Bengaluru",
+    "status": "Operational"
+  }
+]

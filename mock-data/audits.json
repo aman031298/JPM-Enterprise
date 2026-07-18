@@ -1,0 +1,18 @@
+[
+  {
+    "id": "aud-1",
+    "createdAt": "2026-03-01",
+    "updatedAt": "2026-07-09",
+    "title": "Quarterly Internal Audit",
+    "auditor": "Ritika Shah",
+    "status": "In Progress"
+  },
+  {
+    "id": "aud-2",
+    "createdAt": "2026-04-12",
+    "updatedAt": "2026-07-05",
+    "title": "Vendor Compliance Audit",
+    "auditor": "Dinesh Rao",
+    "status": "Planned"
+  }
+]

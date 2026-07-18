@@ -1,0 +1,29 @@
+[
+  {
+    "id": "dep-1",
+    "createdAt": "2026-01-10",
+    "updatedAt": "2026-07-02",
+    "companyId": "cmp-1",
+    "branchId": "br-1",
+    "name": "Corporate Compliance",
+    "head": "Anika Rao"
+  },
+  {
+    "id": "dep-2",
+    "createdAt": "2026-01-18",
+    "updatedAt": "2026-07-03",
+    "companyId": "cmp-1",
+    "branchId": "br-2",
+    "name": "Operations",
+    "head": "Marcus Chen"
+  },
+  {
+    "id": "dep-4",
+    "createdAt": "2026-02-10",
+    "updatedAt": "2026-07-01",
+    "companyId": "cmp-2",
+    "branchId": "br-3",
+    "name": "People Success",
+    "head": "Priya Menon"
+  }
+]

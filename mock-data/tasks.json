@@ -1,0 +1,29 @@
+[
+  {
+    "id": "tsk-1",
+    "createdAt": "2026-07-01",
+    "updatedAt": "2026-07-12",
+    "title": "Upload fire safety evidence",
+    "assignee": "Marcus Chen",
+    "dueDate": "2026-07-17",
+    "status": "In Progress"
+  },
+  {
+    "id": "tsk-2",
+    "createdAt": "2026-07-02",
+    "updatedAt": "2026-07-11",
+    "title": "Review payroll compliance checklist",
+    "assignee": "Priya Menon",
+    "dueDate": "2026-07-19",
+    "status": "Open"
+  },
+  {
+    "id": "tsk-3",
+    "createdAt": "2026-07-03",
+    "updatedAt": "2026-07-10",
+    "title": "Close vendor renewal exceptions",
+    "assignee": "Anika Rao",
+    "dueDate": "2026-07-14",
+    "status": "Blocked"
+  }
+]

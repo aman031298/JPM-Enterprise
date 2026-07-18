@@ -1,0 +1,90 @@
+[
+  {
+    "id": "usr-1",
+    "createdAt": "2026-01-10",
+    "updatedAt": "2026-07-10",
+    "name": "Anika Rao",
+    "email": "anika.rao@jpm-enterprise.demo",
+    "roleId": "role-1",
+    "companyId": "cmp-1",
+    "departmentId": "dep-1",
+    "status": "Active"
+  },
+  {
+    "id": "usr-2",
+    "createdAt": "2026-02-02",
+    "updatedAt": "2026-07-08",
+    "name": "Marcus Chen",
+    "email": "marcus.chen@jpm-enterprise.demo",
+    "roleId": "role-3",
+    "companyId": "cmp-1",
+    "departmentId": "dep-2",
+    "status": "Active"
+  },
+  {
+    "id": "usr-3",
+    "createdAt": "2026-02-18",
+    "updatedAt": "2026-06-30",
+    "name": "Priya Menon",
+    "email": "priya.menon@jpm-enterprise.demo",
+    "roleId": "role-4",
+    "companyId": "cmp-2",
+    "departmentId": "dep-4",
+    "status": "Active"
+  },
+  {
+    "id": "usr-4",
+    "createdAt": "2026-01-20",
+    "updatedAt": "2026-07-05",
+    "name": "Vikram Shah",
+    "email": "vikram.shah@jpm-enterprise.demo",
+    "roleId": "role-2",
+    "companyId": "cmp-1",
+    "departmentId": "dep-1",
+    "status": "Active"
+  },
+  {
+    "id": "usr-5",
+    "createdAt": "2026-02-25",
+    "updatedAt": "2026-07-11",
+    "name": "Ritika Shah",
+    "email": "ritika.shah@jpm-enterprise.demo",
+    "roleId": "role-5",
+    "companyId": "cmp-1",
+    "departmentId": "dep-2",
+    "status": "Active"
+  },
+  {
+    "id": "usr-6",
+    "createdAt": "2026-03-02",
+    "updatedAt": "2026-07-09",
+    "name": "Dinesh Rao",
+    "email": "dinesh.rao@jpm-enterprise.demo",
+    "roleId": "role-6",
+    "companyId": "cmp-2",
+    "departmentId": "dep-4",
+    "status": "Active"
+  },
+  {
+    "id": "usr-7",
+    "createdAt": "2026-03-10",
+    "updatedAt": "2026-07-12",
+    "name": "Sana Kapoor",
+    "email": "sana.kapoor@jpm-enterprise.demo",
+    "roleId": "role-7",
+    "companyId": "cmp-1",
+    "departmentId": "dep-2",
+    "status": "Active"
+  },
+  {
+    "id": "usr-8",
+    "createdAt": "2026-03-15",
+    "updatedAt": "2026-07-13",
+    "name": "SecureSite Vendor Contact",
+    "email": "vendor.contact@jpm-enterprise.demo",
+    "roleId": "role-8",
+    "companyId": "cmp-2",
+    "departmentId": "dep-4",
+    "status": "Active"
+  }
+]

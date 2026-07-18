@@ -1,0 +1,26 @@
+[
+  {
+    "id": "ntf-1",
+    "createdAt": "2026-07-10",
+    "updatedAt": "2026-07-10",
+    "title": "2 compliances are overdue",
+    "description": "Immediate attention required for safety and payroll items.",
+    "severity": "Critical"
+  },
+  {
+    "id": "ntf-2",
+    "createdAt": "2026-07-11",
+    "updatedAt": "2026-07-11",
+    "title": "Vendor license expiring in 29 days",
+    "description": "SecureSite Fire Systems requires renewal documentation.",
+    "severity": "Warning"
+  },
+  {
+    "id": "ntf-3",
+    "createdAt": "2026-07-12",
+    "updatedAt": "2026-07-12",
+    "title": "Audit evidence uploaded",
+    "description": "New evidence added to Quarterly Internal Audit.",
+    "severity": "Info"
+  }
+]

@@ -1,0 +1,58 @@
+[
+  {
+    "id": "role-1",
+    "createdAt": "2026-01-01",
+    "updatedAt": "2026-07-01",
+    "name": "Super Admin",
+    "permissions": ["all"]
+  },
+  {
+    "id": "role-2",
+    "createdAt": "2026-01-01",
+    "updatedAt": "2026-07-01",
+    "name": "Company Admin",
+    "permissions": ["company.read", "company.write", "users.read", "users.write"]
+  },
+  {
+    "id": "role-3",
+    "createdAt": "2026-01-01",
+    "updatedAt": "2026-07-01",
+    "name": "Compliance Officer",
+    "permissions": ["compliance.read", "compliance.write", "calendar.read", "tasks.write"]
+  },
+  {
+    "id": "role-4",
+    "createdAt": "2026-01-01",
+    "updatedAt": "2026-07-01",
+    "name": "HR",
+    "permissions": ["documents.read", "users.read"]
+  },
+  {
+    "id": "role-5",
+    "createdAt": "2026-01-01",
+    "updatedAt": "2026-07-01",
+    "name": "Auditor",
+    "permissions": ["audits.read", "audits.write", "risks.read"]
+  },
+  {
+    "id": "role-6",
+    "createdAt": "2026-01-01",
+    "updatedAt": "2026-07-01",
+    "name": "Manager",
+    "permissions": ["tasks.read", "reports.read"]
+  },
+  {
+    "id": "role-7",
+    "createdAt": "2026-01-01",
+    "updatedAt": "2026-07-01",
+    "name": "Employee",
+    "permissions": ["tasks.read", "documents.read"]
+  },
+  {
+    "id": "role-8",
+    "createdAt": "2026-01-01",
+    "updatedAt": "2026-07-01",
+    "name": "Vendor",
+    "permissions": ["vendor.read", "documents.read"]
+  }
+]

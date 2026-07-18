@@ -1,0 +1,329 @@
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+enum UserStatus {
+  Active
+  Inactive
+}
+
+enum CompanyStatus {
+  Active
+  Pending
+}
+
+enum BranchStatus {
+  Operational
+  AuditReview
+}
+
+enum ComplianceStatus {
+  Upcoming
+  Overdue
+  Completed
+  InProgress
+}
+
+enum Priority {
+  Low
+  Medium
+  High
+  Critical
+}
+
+enum CalendarEventType {
+  Compliance
+  Task
+  Audit
+  Reminder
+}
+
+enum TaskStatus {
+  Open
+  InProgress
+  Blocked
+  Done
+}
+
+enum VendorStatus {
+  Active
+  Expiring
+  Expired
+}
+
+enum AuditStatus {
+  Planned
+  InProgress
+  Closed
+}
+
+enum DocumentStatus {
+  Valid
+  Expiring
+  Expired
+}
+
+enum NotificationSeverity {
+  Info
+  Warning
+  Critical
+}
+
+enum ReportFormat {
+  PDF
+  XLSX
+  CSV
+}
+
+enum ReportStatus {
+  Ready
+  Queued
+}
+
+enum FindingSeverity {
+  Low
+  Medium
+  High
+  Critical
+}
+
+enum FindingStatus {
+  Open
+  Resolved
+}
+
+model Role {
+  id          String   @id
+  createdAt   DateTime
+  updatedAt   DateTime
+  name        String   @unique
+  permissions Json
+  users       User[]
+}
+
+model Company {
+  id              String        @id
+  createdAt       DateTime
+  updatedAt       DateTime
+  name            String
+  industry        String
+  status          CompanyStatus
+  complianceScore Int
+  users           User[]
+  branches        Branch[]
+  departments     Department[]
+}
+
+model Branch {
+  id        String       @id
+  createdAt DateTime
+  updatedAt DateTime
+  companyId String
+  name      String
+  city      String
+  status    BranchStatus
+  company   Company      @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  departments Department[]
+}
+
+model Department {
+  id        String   @id
+  createdAt DateTime
+  updatedAt DateTime
+  companyId String
+  branchId  String
+  name      String
+  head      String
+  company   Company  @relation(fields: [companyId], references: [id], onDelete: Cascade)
+  branch    Branch   @relation(fields: [branchId], references: [id], onDelete: Cascade)
+  users     User[]
+}
+
+model User {
+  id           String     @id
+  createdAt    DateTime
+  updatedAt    DateTime
+  name         String
+  email        String     @unique
+  passwordHash String
+  roleId       String
+  companyId    String
+  departmentId String
+  status       UserStatus
+  role         Role       @relation(fields: [roleId], references: [id])
+  company      Company    @relation(fields: [companyId], references: [id])
+  department   Department @relation(fields: [departmentId], references: [id])
+}
+
+model Compliance {
+  id        String           @id
+  createdAt DateTime
+  updatedAt DateTime
+  title     String
+  category  String
+  owner     String
+  dueDate   DateTime
+  status    ComplianceStatus
+  priority  Priority
+}
+
+model CalendarEvent {
+  id        String            @id
+  createdAt DateTime
+  updatedAt DateTime
+  title     String
+  date      DateTime
+  type      CalendarEventType
+  owner     String
+}
+
+model Task {
+  id        String     @id
+  createdAt DateTime
+  updatedAt DateTime
+  title     String
+  assignee  String
+  dueDate   DateTime
+  status    TaskStatus
+}
+
+model Vendor {
+  id            String       @id
+  createdAt     DateTime
+  updatedAt     DateTime
+  name          String
+  category      String
+  licenseExpiry DateTime
+  status        VendorStatus
+}
+
+model Audit {
+  id             String          @id
+  createdAt      DateTime
+  updatedAt      DateTime
+  title          String
+  auditor        String
+  status         AuditStatus
+  checklistItems ChecklistItem[]
+  findingItems   Finding[]
+  evidenceItems  Evidence[]
+}
+
+model ChecklistItem {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  auditId   String
+  label     String
+  done      Boolean  @default(false)
+  audit     Audit    @relation(fields: [auditId], references: [id], onDelete: Cascade)
+}
+
+model Finding {
+  id          String          @id @default(cuid())
+  createdAt   DateTime        @default(now())
+  updatedAt   DateTime        @updatedAt
+  auditId     String
+  description String
+  severity    FindingSeverity
+  status      FindingStatus   @default(Open)
+  audit       Audit           @relation(fields: [auditId], references: [id], onDelete: Cascade)
+}
+
+model Evidence {
+  id        String   @id @default(cuid())
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+  auditId   String
+  title     String
+  fileName  String?
+  filePath  String?
+  mimeType  String?
+  size      Int?
+  audit     Audit    @relation(fields: [auditId], references: [id], onDelete: Cascade)
+}
+
+model Risk {
+  id         String   @id
+  createdAt  DateTime
+  updatedAt  DateTime
+  title      String
+  category   String
+  impact     Int
+  likelihood Int
+  mitigation String
+  owner      String
+}
+
+model DocumentRecord {
+  id         String         @id
+  createdAt  DateTime
+  updatedAt  DateTime
+  title      String
+  category   String
+  owner      String
+  expiryDate DateTime
+  status     DocumentStatus
+  fileName   String?
+  filePath   String?
+  mimeType   String?
+  size       Int?
+}
+
+model Notification {
+  id             String               @id
+  createdAt      DateTime
+  updatedAt      DateTime
+  title          String
+  description    String
+  severity       NotificationSeverity
+  emailDelivered Boolean              @default(false)
+  emailRecipient String?
+}
+
+model ReportRecord {
+  id          String       @id
+  createdAt   DateTime
+  updatedAt   DateTime
+  title       String
+  generatedOn DateTime
+  format      ReportFormat
+  status      ReportStatus
+}
+
+model Settings {
+  id                   String   @id
+  createdAt            DateTime
+  updatedAt            DateTime
+  companyPolicy        String
+  reminderWindowDays   Int
+  escalationMatrix     Json
+  complianceCategories Json
+  documentCategories   Json
+  riskCategories       Json
+}
+
+enum LeadType {
+  Demo
+  Contact
+  Newsletter
+}
+
+model Lead {
+  id          String   @id @default(cuid())
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+  type        LeadType
+  name        String
+  email       String
+  company     String?
+  phone       String?
+  message     String?
+  jobTitle    String?
+  companySize String?
+}

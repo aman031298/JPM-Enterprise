@@ -1,0 +1,44 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  color: #101828;
+  background: #f4f6fb;
+}
+
+html.dark {
+  color: #e7e9f3;
+  background: #0b0f19;
+}
+
+body {
+  @apply min-h-screen bg-canvas font-body text-ink antialiased;
+  background-image:
+    radial-gradient(circle at top left, rgba(42, 91, 215, 0.06), transparent 32%),
+    radial-gradient(circle at bottom right, rgba(42, 91, 215, 0.04), transparent 36%);
+}
+
+.dark body {
+  @apply bg-[#0b0f19] text-[#e7e9f3];
+  background-image:
+    radial-gradient(circle at top left, rgba(93, 128, 234, 0.09), transparent 32%),
+    radial-gradient(circle at bottom right, rgba(93, 128, 234, 0.06), transparent 36%);
+}
+
+#root {
+  @apply min-h-screen;
+}
+
+::selection {
+  background-color: #b8caf9;
+  color: #142556;
+}
+
+* {
+  scrollbar-color: theme("colors.line") transparent;
+}
+
+.dark * {
+  scrollbar-color: rgba(255, 255, 255, 0.15) transparent;
+}
