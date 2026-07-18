@@ -2,6 +2,7 @@
   "name": "jpm-enterprise-compliance-system",
   "private": true,
   "version": "1.0.0",
+  "type": "module",
   "workspaces": [
     "apps/frontend",
     "apps/backend"
